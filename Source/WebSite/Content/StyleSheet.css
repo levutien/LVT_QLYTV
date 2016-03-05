@@ -1,0 +1,55 @@
+﻿
+.progress-bar {
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    outline: medium none;
+}
+
+.form-control {
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    position: relative;
+}
+
+body {
+    background: rgba(0, 0, 0, 0) url("../Images/GHr12sH.jpg") no-repeat fixed center center / cover;
+}
+
+.login-form {
+    margin-top: 60px;
+}
+
+.formlogin {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #5d5d5d;
+    padding: 26px;
+}
+
+    .formlogin img {
+        display: block;
+        margin: 0 auto 35px;
+    }
+
+    .formlogin input, .formlogin button {
+        font-size: 18px;
+        margin: 16px 0;
+    }
+
+    .formlogin > div {
+        text-align: center;
+    }
+
+.form-links {
+    margin-bottom: 50px;
+    margin-top: 1em;
+    text-align: center;
+}
+
+    .form-links a {
+        color: #fff;
+    }
