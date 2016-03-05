@@ -1,0 +1,28 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace BUS
+{
+    public class tblMemberCard
+    {
+        public static List<DTO.tblMemberCard> GetAll()
+        {
+            return DAO.tblMemberCard.Get(0);
+        }
+
+        public static DTO.tblMemberCard GetByID(int card_id)
+        {
+            return DAO.tblMemberCard.Get(card_id).FirstOrDefault();
+        }
+
+        public static int Create(DTO.tblMemberCard item)
+        {
+            return DAO.tblMemberCard.Create(item);
+        }
+
+        public static int Delete(int card_id)
+        {
+            return DAO.tblMemberCard.Delete(card_id);
+        }
+    }
+}
