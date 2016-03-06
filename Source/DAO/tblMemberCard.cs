@@ -23,6 +23,25 @@ namespace DAO
             return lsArray;
         }
 
+        public static System.Data.DataTable Login(int card_id, string email, string accessCode)
+        {
+            ConnectionCRM conn = null;
+            System.Data.DataTable dt = new System.Data.DataTable();
+            try
+            {
+                conn = new ConnectionCRM();
+                conn.Open();
+                List<System.Data.SqlClient.SqlParameter> lsInput = new List<System.Data.SqlClient.SqlParameter>();
+                lsInput.Add(new System.Data.SqlClient.SqlParameter("@Card_ID", card_id));
+                lsInput.Add(new System.Data.SqlClient.SqlParameter("@Email", email));
+                lsInput.Add(new System.Data.SqlClient.SqlParameter("@AccessCode", accessCode));
+                dt = conn.ExecuteNonQueryData("sp_tblMemberCard_Login", lsInput);
+            }
+            catch (Exception ex) { }
+            finally { conn.Close(); }
+            return dt;
+        }
+
         public static int Create(DTO.tblMemberCard item)
         {
             int result = 0;

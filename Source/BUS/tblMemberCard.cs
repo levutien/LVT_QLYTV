@@ -24,5 +24,10 @@ namespace BUS
         {
             return DAO.tblMemberCard.Delete(card_id);
         }
+
+        public static System.Data.DataTable Login(int card_id, string email, string accessCode)
+        {
+            return DAO.tblMemberCard.Login(card_id, email, accessCode);
+        }
     }
 }

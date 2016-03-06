@@ -19,7 +19,7 @@
                         <label>Họ và tên:</label>
                     </div>
                     <div class="col-xs-6">
-                        <label>Fullname</label>
+                        <asp:Label ID="lbFullname" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -27,7 +27,7 @@
                         <label>Giới tính: </label>
                     </div>
                     <div class="col-xs-6">
-                        <label>Description (tblGender)</label>
+                        <asp:Label ID="lbGender" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -35,7 +35,7 @@
                         <label>Ngày sinh: </label>
                     </div>
                     <div class="col-xs-6">
-                        <label>DOB + YOB</label>
+                        <asp:Label ID="lbDOBYOB" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -43,7 +43,7 @@
                         <label>Địa chỉ: </label>
                     </div>
                     <div class="col-xs-6">
-                        <label>AddressLine1+AddressLine2</label>
+                        <asp:Label ID="lbAddressLine" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -51,7 +51,7 @@
                         <label>Điện thoại: </label>
                     </div>
                     <div class="col-xs-6">
-                        <label>MobilePhone</label>
+                        <asp:Label ID="lbMobilePhone" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -59,7 +59,7 @@
                         <label>Email: </label>
                     </div>
                     <div class="col-xs-6">
-                        <label>Email</label>
+                        <asp:Label ID="lbEmail" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -67,7 +67,7 @@
                         <label>Nơi điều trị: </label>
                     </div>
                     <div class="col-xs-6">
-                        <label>PlaceName</label>
+                        <asp:Label ID="lbPlaceName" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
             </div>

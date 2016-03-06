@@ -7,6 +7,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite", "http://localhost
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{fc76fa97-2c60-48cb-a6d4-f786b17cf6be}|DTO.dll;{ca5c4bf6-80cb-437d-88a4-a45b87f22837}|BUS.dll;{0013A826-7C9C-40DA-A9D0-69939E8400DD}|DAO.dll;{AC627CE0-82AA-4F7A-A3D3-0D64EFF2B3D6}|Connection.dll;{EFFF4421-20AB-4949-AAB5-806D196A24BA}|Core.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_4877"
 		Debug.AspNetCompiler.PhysicalPath = "WebSite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4877\"
