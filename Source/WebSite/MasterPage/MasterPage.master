@@ -14,6 +14,8 @@
     <link href="/Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="/Content/StyleSheet.css" rel="stylesheet" />
     <link href="/Content/Style.css" rel="stylesheet" />
+    <link href="/Content/Style_menubar.css" rel="stylesheet" />
+    <link href="/Content/Slider.css" rel="stylesheet" />
     <script src="/Scripts/bootstrap.js"></script>
     <script src="/Scripts/jquery-2.2.1.js"></script>
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
@@ -23,27 +25,66 @@
     <form id="frmMain" runat="server">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                    <img class="img-responsive logo" src="../Images/logo.png" />
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                    <div class="col-xs-12">
-                        Kính chào Quý khách: <b>
-                            <asp:Label ID="lbFullName" runat="server" Text=""></asp:Label></b>
+               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-left">
+                    <div id="slider">
+                        <figure>
+                            <img src="../Images/banner.png" alt=""/>
+                            <img src="../Images/banner_2.jpg" alt=""/>
+                            <img src="../Images/banner_3.gif" alt=""/>
+                            <img src="../Images/banner_4.jpg" alt=""/>
+                        </figure>
                     </div>
-                    <div class="col-xs-12">
-                        <a href="/doi-mat-khau.html">Đổi mật khẩu</a>
+                  
+                     <%--<img class="img-responsive logo" src="../Images/banner_2.jpg"/> --%>
+                   
+                </div>    
+        
+                <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+
+                   <%-- <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-left">
+                         <a href="www.mat304.com">
+                             <img class="img-responsive logo" src="../Images/logo_304.png"/> 
+                         </a>
+                    </div>                   
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+                         <a href="haiyeneyecenter.com">
+                         <img class="img-responsive logo" src="../Images/logo_HYEC.png"/>
+                         </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+                         <a href="www.matansinh.com">
+                         <img class="img-responsive logo" src="../Images/logo_as.png"/>
+                         </a>
+                    </div>--%>
+
+                    <div class="col-xs-12 text-center">
+                         <img class="img-responsive logo" src="../Images/logo_group.png"/>
+                    </div>
+                   
+                    <div class="col-xs-12 text-center">
+                       <h3 style="color:#2d5c8a">HỆ THỐNG THẺ THÀNH VIÊN </h3> 
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        Kính chào Quý khách: 
+                            <a href="/thong-tin-khach-hang.html"><b>
+                                <asp:Label ID="lbFullName" runat="server" Text=""></asp:Label></b></a>
+                    </div>
+                    <div class="col-xs-12 text-center" >
+                        <a href="/doi-mat-khau.html">Đổi mật khẩu</a> 
                         <a href="/dang-xuat.html">Thoát</a>
 
                     </div>
                 </div>
             </div>
-            <div class="row menu">
+                </br> </br>
+            <div id="crumbs" class="row">
                 <ul>
                     <li><a href="/thong-tin-khach-hang.html">Thông tin khách hàng</a></li>
                     <li><a href="/ho-tro-dich-vu.html">Hỗ trợ dịch vụ</a></li>
+                    <li><a href="/quy-dinh-ve-the.html">Quy định về thẻ</a></li>
                 </ul>
             </div>
+            </br> </br>
             <asp:ContentPlaceHolder ID="clhContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>

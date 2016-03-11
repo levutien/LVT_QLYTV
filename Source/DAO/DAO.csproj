@@ -55,6 +55,7 @@
     <Compile Include="tblScheduleProvide.cs" />
     <Compile Include="tblServicePlace.cs" />
     <Compile Include="tblServiceTransaction.cs" />
+    <Compile Include="tblStaff.cs" />
     <Compile Include="tblStatus.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,10 @@ public partial class Pages_ServiceTransaction : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            gvData.DataSource = BUS.tblServiceTransaction.GetView(((MasterPage_MasterPage)Master).Card_ID);
+            gvData.DataBind();
+        }
     }
 }

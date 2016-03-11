@@ -29,5 +29,10 @@ namespace BUS
         {
             return DAO.tblMemberCard.Login(card_id, email, accessCode);
         }
+
+        public static bool ChangePassword(int card_id, string accessCodeOld, string accessCodeNew)
+        {
+            return DAO.tblMemberCard.ChangePassword(card_id, accessCodeOld, accessCodeNew);
+        }
     }
 }

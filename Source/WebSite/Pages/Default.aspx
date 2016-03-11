@@ -7,18 +7,20 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="form-horizontal">
                 <div class="form-group">
-                    <div class="col-xs-9">
-                        <h4>Thông tin cá nhân</h4>
+                    <div class="col-xs-6">
+                        <h4 style="color:#2d5c8a">Thông tin cá nhân</h4>
                     </div>
-                    <asp:Button ID="btnEdit" CssClass="col-xs-3 btn btn-default btn-primary" runat="server" Text="Chỉnh sửa" />
+                    <div class="col-xs-6">
+                        <a class="col-xs-5  btn btn-primary" href="/cap-nhat-thong-tin.html">Chỉnh sửa</a>
+                    </div>
                 </div>
             </div>
-            <div class="form-horizontal">
+            <div class="form-horizontal text-center">
                 <div class="form-group">
                     <div class="col-xs-6">
                         <label>Họ và tên:</label>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbFullname" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
@@ -26,7 +28,7 @@
                     <div class="col-xs-6">
                         <label>Giới tính: </label>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbGender" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
@@ -34,7 +36,7 @@
                     <div class="col-xs-6">
                         <label>Ngày sinh: </label>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbDOBYOB" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
@@ -42,7 +44,7 @@
                     <div class="col-xs-6">
                         <label>Địa chỉ: </label>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbAddressLine" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
@@ -50,15 +52,15 @@
                     <div class="col-xs-6">
                         <label>Điện thoại: </label>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbMobilePhone" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">
                         <label>Email: </label>
-                    </div>
-                    <div class="col-xs-6">
+                    </div> 
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbEmail" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
@@ -66,7 +68,7 @@
                     <div class="col-xs-6">
                         <label>Nơi điều trị: </label>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-6 text-left">
                         <asp:Label ID="lbPlaceName" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
@@ -75,64 +77,64 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
             <div class="form-horizontal">
                 <div class="form-group">
-                    <h4>Thông tin thẻ</h4>
+                    <h4 style="color:#2d5c8a">Thông tin thẻ</h4>
                 </div>
             </div>
-            <div class="form-horizontal">
+            <div class="form-horizontal text-center">
                 <div class="form-group">
                     <div class="col-xs-6">
-                        <label>Họ và tên:</label>
+                        <label>Mã thẻ:</label>
                     </div>
-                    <div class="col-xs-6">
-                        <label>Fullname</label>
+                    <div class="col-xs-6 text-left">
+                        <asp:Label ID="lbCard_ID" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">
-                        <label>Giới tính: </label>
+                        <label>Loại thẻ: </label>
                     </div>
-                    <div class="col-xs-6">
-                        <label>Description (tblGender)</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label>Ngày sinh: </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>DOB + YOB</label>
+                    <div class="col-xs-6 text-left">
+                        <asp:Label ID="lbCardType_ID" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">
-                        <label>Địa chỉ: </label>
+                        <label>Ngày cấp thẻ: </label>
                     </div>
-                    <div class="col-xs-6">
-                        <label>AddressLine1+AddressLine2</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-6">
-                        <label>Điện thoại: </label>
-                    </div>
-                    <div class="col-xs-6">
-                        <label>MobilePhone</label>
+                    <div class="col-xs-6 text-left">
+                        <asp:Label ID="lbIssueDate" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">
-                        <label>Email: </label>
+                        <label>Ngày hết hạn: </label>
                     </div>
-                    <div class="col-xs-6">
-                        <label>Email</label>
+                    <div class="col-xs-6 text-left">
+                        <asp:Label ID="lbExpDate" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-6">
-                        <label>Nơi điều trị: </label>
+                        <label>Tình trạng thẻ: </label>
                     </div>
+                    <div class="col-xs-6 text-left">
+                        <asp:Label ID="lbStatus_ID" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-xs-6">
-                        <label>PlaceName</label>
+                        <label>Số điểm tích lũy: </label>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <asp:Label ID="lbTotalPoint" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-6">
+                        <label>Giao dịch điểm: </label>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <a href="/chi-riet-giao-dich-diem.html">Xem chi tiết</a>
                     </div>
                 </div>
             </div>

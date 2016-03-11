@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageMemberCard.master.cs" Inherits="Administrator_MasterPage_MasterPageMemberCard" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Hệ thống thẻ thành viên</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/Content/StyleSheet.css" rel="stylesheet" />
+    <link href="/Content/Style.css" rel="stylesheet" />
+    <link href="/Content/Style_menubar.css" rel="stylesheet" />
+    <link href="/Content/Slider.css" rel="stylesheet" />
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/jquery-2.2.1.js"></script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmMain" runat="server">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                    <img class="img-responsive logo" src="/Images/logo.png" />
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                    <div class="col-xs-12">
+                        Kính chào nhân viên: 
+                            <a href="#"><b>
+                                <asp:Label ID="lbFullName" runat="server" Text=""></asp:Label></b></a>
+                    </div>
+                    <div class="col-xs-12">
+                        <a href="/admin/doi-mat-khau.html">Đổi mật khẩu</a>
+                        <a href="/admin/dang-xuat.html">Thoát</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row menu">
+                <ul>
+                    <li><a href="/thong-tin-khach-hang.html">Quản lý thẻ</a></li>
+                    <li><a href="/ho-tro-dich-vu.html">Báo Cáo</a></li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="clhContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

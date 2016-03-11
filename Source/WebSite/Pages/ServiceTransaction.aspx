@@ -4,37 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="clhContent" runat="Server">
     <div class="row">
-        <div class="col-xs-12">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <asp:GridView ID="gvData" runat="server" CssClass="table table-hover table-striped table-bordered" GridLines="None" AutoGenerateColumns="False" HeaderStyle-CssClass="text-center">
+                <Columns>
+                    <asp:BoundField DataField="STT" HeaderText="STT" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-left" />
+                    <asp:BoundField DataField="ServiceDate" HeaderText="Ngày giao dịch" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-left" DataFormatString="{0:dd/MM/yyyy}" />
+                    <asp:BoundField DataField="PlaceName" HeaderText="Dịch vụ sử dụng" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-left" />
+                    <asp:BoundField DataField="Increase_Decrease" HeaderText="Loại giao dịch" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-left" />
+                    <asp:BoundField DataField="PointRec" HeaderText="Điểm tích lũy" HeaderStyle-CssClass="text-center" ItemStyle-CssClass="text-right" DataFormatString="{0:N0}" />
+                </Columns>
+                <HeaderStyle CssClass="text-center" />
+                <RowStyle CssClass="cursor-pointer" />
+                <PagerStyle CssClass="pagination-ys" />
+            </asp:GridView>
         </div>
     </div>
 

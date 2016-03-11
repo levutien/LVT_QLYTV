@@ -34,7 +34,7 @@ namespace DTO
             Customer_ID = row["Customer_ID"].ToString() != "" ? Convert.ToInt32(row["Customer_ID"]) : 0;
             FullName = row["FullName"].ToString();
             Gender_ID = row["Gender_ID"].ToString() != "" ? Convert.ToInt32(row["Gender_ID"]) : 0;
-            DOB = row["DOB"].ToString() != "" ? Convert.ToDateTime(row["DOB"]) : DateTime.Now;
+            DOB = row["DOB"].ToString() != "" ? Convert.ToDateTime(row["DOB"]) : (DateTime?)null;
             YOB = row["YOB"].ToString() != "" ? Convert.ToInt32(row["YOB"]) : 0;
             AddressLine1 = row["AddressLine1"].ToString();
             AddressLine2 = row["AddressLine2"].ToString();

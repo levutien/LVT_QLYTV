@@ -20,6 +20,7 @@ public partial class Pages_Login : System.Web.UI.Page
             if (int.TryParse(txtUserName.Text, out card_id))
                 card_id = Convert.ToInt32(txtUserName.Text.Trim());
             System.Data.DataTable dt = BUS.tblMemberCard.Login(card_id, txtUserName.Text, txtPassword.Text);
+            lbError.Text = "";
             if (dt.Rows.Count > 0)
             {
                 if (Request.Browser.Cookies)
@@ -34,6 +35,10 @@ public partial class Pages_Login : System.Web.UI.Page
                     Response.Cookies.Add(aCookie);
                     Response.Redirect("index.html");
                 }
+            }
+            else
+            {
+                lbError.Text = "Mã thẻ và email không tồn tại hoặc mật khẩu không chính xác";
             }
         }
     }

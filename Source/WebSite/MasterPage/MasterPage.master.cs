@@ -43,7 +43,9 @@ public partial class MasterPage_MasterPage : System.Web.UI.MasterPage
                     result = myCookie.Values["Card_ID"].ToString();
                 }
             }
-            return Convert.ToInt32(result);
+            if (result != "")
+                return Convert.ToInt32(result);
+            return 0;
         }
     }
 
@@ -60,7 +62,28 @@ public partial class MasterPage_MasterPage : System.Web.UI.MasterPage
                     result = myCookie.Values["Customer_ID"].ToString();
                 }
             }
-            return Convert.ToInt32(result);
+            if (result != "")
+                return Convert.ToInt32(result);
+            return 0;
         }
+    }
+
+    public string FullName
+    {
+        get
+        {
+            string result = "";
+            HttpCookie myCookie = Request.Cookies["userInfo"];
+            if (myCookie != null)
+            {
+                if (!string.IsNullOrEmpty(myCookie.Values["FullName"]))
+                {
+                    result = myCookie.Values["FullName"].ToString();
+                }
+            }
+            if (result != "")
+                return result;
+            return "";
+        }        
     }
 }

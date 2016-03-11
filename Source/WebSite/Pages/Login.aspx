@@ -13,11 +13,14 @@
                     </div>
                     <asp:TextBox ID="txtUserName" placeholder="Nhập Card ID hoặc Email" class="form-control input-lg" runat="server"></asp:TextBox>
                     <small class="help-block">
-                        <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Vui lòng Card ID hoặc Email" ValidationGroup="Data" ControlToValidate="txtUserName" CssClass="help-block" Display="Dynamic" ForeColor="#C10841"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Vui lòng nhập mã thẻ hoặc email." ValidationGroup="Data" ControlToValidate="txtUserName" CssClass="help-block" Display="Dynamic" ForeColor="#C10841"></asp:RequiredFieldValidator>
                     </small>
-                    <asp:TextBox ID="txtPassword" placeholder="Nhập Access Code" class="form-control input-lg" ValidationGroup="Data" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" placeholder="Nhập Access Code" class="form-control input-lg" ValidationGroup="Data" TextMode="Password" runat="server"></asp:TextBox>
                     <small class="help-block">
-                        <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="Vui lòng nhập Access Code" ValidationGroup="Data" ControlToValidate="txtPassword" CssClass="help-block" Display="Dynamic" ForeColor="#C10841"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage=" Vui lòng nhập mật khẩu." ValidationGroup="Data" ControlToValidate="txtPassword" CssClass="help-block" Display="Dynamic" ForeColor="#C10841"></asp:RequiredFieldValidator>
+                    </small>
+                    <small class="help-block">
+                        <asp:Label ID="lbError" runat="server" Text="" CssClass="help-block" Display="Dynamic" ForeColor="#C10841"></asp:Label>
                     </small>
                     <div>
                         Quên mật khẩu? Nhấn vào <a href="/quen-mat-khau.html">đây</a>

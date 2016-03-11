@@ -42,6 +42,26 @@ namespace DAO
             return dt;
         }
 
+        public static bool ChangePassword(int card_id, string accessCodeOld, string accessCodeNew)
+        {
+            ConnectionCRM conn = null;
+            bool result = false;
+            try
+            {
+                conn = new ConnectionCRM();
+                conn.Open();
+                List<System.Data.SqlClient.SqlParameter> lsInput = new List<System.Data.SqlClient.SqlParameter>();
+                lsInput.Add(new System.Data.SqlClient.SqlParameter("@Card_ID", card_id));
+                lsInput.Add(new System.Data.SqlClient.SqlParameter("@AccessCodeOld", accessCodeOld));
+                lsInput.Add(new System.Data.SqlClient.SqlParameter("@AccessCodeNew", accessCodeNew));
+                System.Data.DataTable dt = conn.ExecuteNonQueryData("sp_tblMemberCard_ChangePassword", lsInput);
+                result = dt.Rows.Count > 0;
+            }
+            catch (Exception ex) { }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public static int Create(DTO.tblMemberCard item)
         {
             int result = 0;
